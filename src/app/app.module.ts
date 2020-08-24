@@ -13,7 +13,8 @@ import { DiscoverComponent } from './discover/discover.component';
 import { ServiceService } from './service.service';
 import { PaymentComponent } from './payment/payment.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     LoginComponent,
     DiscoverComponent,
     PaymentComponent,
-    UserdashboardComponent
+    UserdashboardComponent,
+    ThankYouComponent
   ],
   imports: [
     BrowserModule,
