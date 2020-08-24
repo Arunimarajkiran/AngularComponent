@@ -24,18 +24,15 @@
                 <input type="text" placeholder="Enter Last Name" name="lname" [(ngModel)]='user.lastName' required >
   
                 <label for="email"><b>Email Address</b></label>
-                <input type="email" placeholder="Enter Email Address" name="email" pattern=".+@lti" [(ngModel)]='user.email' required>
+                <input type="email" placeholder="Enter Email Address" name="email" pattern=".+@gmail.com" [(ngModel)]='user.email' required>
             
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="pass" 
+                <input type="password" placeholder="Enter Password" name="psw" minlength="8"
                 [(ngModel)]='user.password' required >
   
-                <label for="psw"><b>Confirm Password</b></label>
-                <input type="password" placeholder="Enter Password again" name="pass" 
-                [(ngModel)]='user.confirmPassword' required >
                 
                 <label for="date"><b>Date of Birth</b></label> <br>
-                <input type="date" name="date" [(ngModel)]='user.dateOfBirth' required ><br><br>
+                <input type="date" name="date" [(ngModel)]='user.dateOfBirth' min="1980-01-01" max="2002-12-31" required ><br><br>
             
                 <label for="mobile"><b>Mobile No.</b></label>
                 <input type="tel" placeholder="Enter Mobile Number" pattern="[0-9]*" name="mobile" minlength="10" maxlength="10" 
@@ -44,7 +41,7 @@
                 
     
                 <button type="submit">Register</button>
-                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="button" class="cancelbtn" type="reset">Cancel</button>
               </div>
             </table>
             </form>
@@ -52,6 +49,6 @@
       </div>
       </div>
      </div>
-    
+     <h1>{{status?.message}}</h1>
      </body>
 </html>

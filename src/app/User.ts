@@ -3,7 +3,7 @@ export class User{
     lastName:string;
     email:string;
     password:string;
-    confirmPassword:string;
+   
     dateOfBirth:string;
     mobileNumber:string;
 }
