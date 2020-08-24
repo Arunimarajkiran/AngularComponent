@@ -11,8 +11,9 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { DiscoverComponent } from './discover/discover.component';
 import { ServiceService } from './service.service';
-import { HttpClient } from '@angular/common/http';
 import { PaymentComponent } from './payment/payment.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,13 +24,14 @@ import { PaymentComponent } from './payment/payment.component';
     RegisterComponent,
     LoginComponent,
     DiscoverComponent,
-    PaymentComponent
+    PaymentComponent,
+    UserdashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-   
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

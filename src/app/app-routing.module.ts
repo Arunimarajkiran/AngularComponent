@@ -6,6 +6,7 @@ import { ClassesComponent } from "./classes/classes.component";
 import { RegisterComponent } from "./register/register.component";
 import { LoginComponent } from "./login/login.component";
 import { DiscoverComponent } from "./discover/discover.component";
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,9 @@ const routes: Routes = [
   },
   {
     path:'loginlink',component:LoginComponent
+  },
+  {
+    path:'dashboardlink',component:UserdashboardComponent
   }
   
 ];

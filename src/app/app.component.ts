@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Pg1';
+  title = 'AirFuselage';
   constructor(private router:Router){}
   getHome(){
     this.router.navigate(['/homelink']);
@@ -28,4 +28,3 @@ export class AppComponent {
     this.router.navigate(['/loginlink']);
   }
 }
-
