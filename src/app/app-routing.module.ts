@@ -7,6 +7,7 @@ import { RegisterComponent } from "./register/register.component";
 import { LoginComponent } from "./login/login.component";
 import { DiscoverComponent } from "./discover/discover.component";
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,9 @@ const routes: Routes = [
   },
   {
     path:'dashboardlink',component:UserdashboardComponent
+  },
+  {
+    path:'thankyoulink',component:ThankYouComponent
   }
   
 ];

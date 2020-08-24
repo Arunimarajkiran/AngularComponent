@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit{
 
               sessionStorage.setItem('userId',String(userId));
               sessionStorage.setItem('userName',userName);
-              this.router.navigate(['dashboardlink']);
+              this.router.navigate(['thankyoulink']);
           }
           else {
               this.message=data.message;
