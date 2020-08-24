@@ -15,6 +15,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ThankYouComponent } from './thank-you/thank-you.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
     DiscoverComponent,
     PaymentComponent,
     UserdashboardComponent,
-    ThankYouComponent
+    ThankYouComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
