@@ -1,0 +1,32 @@
+.background {
+    background-image: url("/assets/businessClassbg.jpg");
+    text-align: center;
+    background-size: cover;
+    color: white;
+    font-size: 20px;
+}
+
+h1 {
+    padding: 300px 900px 0px 40px;
+    
+}
+  .column {
+    float: left;
+    padding: 5px;
+    width: 49%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    
+  }
+  div.container {
+    text-align: center;
+    padding: 10px 20px;
+  }

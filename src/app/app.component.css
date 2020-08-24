@@ -1,0 +1,218 @@
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: cornsilk;
+    
+  }
+  
+  li {
+    float: left;
+    padding: 5px;
+    font-size: 40px;
+  }
+  li a {
+    font-size: 25px;
+    float: right;
+    padding: 14px 10px;
+    display: block;
+    color: black;
+    text-decoration: none;
+  }
+
+  /*li a  {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+    font-size: 25px;
+  }*/
+
+  .dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  li a:hover .dropdown:hover  .dropbtn{
+    background-color: bisque;
+  }
+
+  li.dropdown {
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: grey;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 25px;
+  }
+
+  .dropdown-content a:hover {background-color: cornsilk;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  .diff{
+    padding-right: 250px;
+    padding-top: 30px;
+  }
+  .button {
+    background-color: orange; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 100px;
+    width: 70px;
+
+  }
+
+  .footer {
+    background: #343a40;
+    color: white;
+    height: 400px;
+    position: relative;
+    margin-top: 75px;
+  }
+
+  .footer .footer-content{
+    border: 1px solid red;
+    height: 350px;
+    display: flex;
+  
+  }
+
+  .footer .footer-content .footer-section{
+    flex: 1;
+    padding: 25px;
+    border: 1px solid white;
+
+  }
+  .footer .footer-bottom {
+    background: grey;
+    color: white;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 15px;
+    width: 100%;
+
+  }
+
+  
+  .footer .footer-content h2 {
+    color: white;
+  }
+
+  .footer .footer-content .about h2 span {
+    color: teal;
+  }
+
+  .footer .footer-content .about .contact span{
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+  }
+
+  .footer .footer-content .about .socials a{
+    border: 1px solid grey;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+  }
+
+  .footer .footer-content .about .socials a:hover{
+    border: 1px solid white;
+    color: white;
+  }
+
+  .social {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 4px;
+    background: white;
+    color: white;
+  }
+
+  .footer .footer-section .links .newul{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+
+  }
+
+  .newul {
+    color: white;
+    list-style-type: none;
+  }
+
+  .links .newul a:hover{
+    color: white;
+    margin-left: 15px;
+
+  }
+
+    .contact-input {
+    background: #272727;
+    color: #bebdbd;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+  }
+  .text-input  {
+    background: #272727;
+    color: #bebdbd;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+  }
+
+   .contact-input:focus {
+    background: #1a1a1a;
+  }
+  .text-input:focus {
+    background: #1a1a1a;
+  }
+  
+  .btn-big {
+    padding: 0.7rem 1.3rem;
+    line-height: 1.3rem;
+    background-color: teal;
+  }
+
+  .contact-btn {
+    float: right;
+  }

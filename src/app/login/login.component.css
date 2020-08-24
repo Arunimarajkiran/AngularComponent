@@ -1,0 +1,163 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #888;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  strong {
+    font-weight: 500;
+  }
+  
+  .heading {
+    float: left;
+    width: 150%;
+    padding: 10px;
+  }
+  
+  .heading h3 {
+  text-align: justify;
+    margin: auto;
+    color: #fff;
+  }
+  
+  .heading p {
+    opacity: 0.8;
+    color: #fff;
+  }
+  
+  .form-top-right {
+    float: left;
+    width: 25%;
+    padding-top: 5px;
+    font-size: 66px;
+    color: #fff;
+    line-height: 100px;
+    text-align: right;
+    opacity: 0.3;
+  }
+  
+  .form-top {
+    overflow: hidden;
+    padding: 0 25px 15px 25px;
+    background: #444;
+    background: rgba(0, 0, 0, 0.35);
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    text-align: left;
+  }
+  
+  
+  img {
+    max-width: 100%;
+  }
+  
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .main {
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    padding: 18px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  /*Register page*/
+  /* Full-width inputs */
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .container1 {
+      width: 300px;
+      margin: auto;
+  }
+  
+  .container {
+    padding: 25px 25px 30px 25px;
+    width: 350px;
+    margin: auto;
+    background: #444;
+    background: rgba(0, 0, 0, 0.3);
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    text-align: left;
+  }
+  
+  .form-box {
+    margin-top: 70px;
+  }
+  
+  .form-bottom {
+    padding: 25px 25px 30px 25px;
+    background: #444;
+    background: rgba(0, 0, 0, 0.3);
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    text-align: left;
+  }
+  
+  .form-bottom form textarea {
+    height: 100px;
+  }
+  
+  .form-bottom form button.btn {
+    width: 100%;
+  }
+  
+  .form-bottom form .input-error {
+    border-color: #19b9e7;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: darkblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /*Login page css*/
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 12px;
+  }
+  

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bo">
+ 
+    <div class="row">
+      <div class="main">
+        <div class="card">
+            
+          <h2 style="text-align: center;"> Hello Where do you want to explore?</h2>
+          
+           <form #registerForm='ngForm' (ngSubmit)='registerAUser(registerForm)' > 
+            <table align="center">
+            
+              <div class="container">
+                <label for="uname"><b>First Name</b></label>
+                <input type="text" placeholder="Enter First Name" name="uname" [(ngModel)]='user.firstName' required >
+  
+                <label for="lname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lname" [(ngModel)]='user.lastName' required >
+  
+                <label for="email"><b>Email Address</b></label>
+                <input type="email" placeholder="Enter Email Address" name="email" pattern=".+@lti" [(ngModel)]='user.email' required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="pass" 
+                [(ngModel)]='user.password' required >
+  
+                <label for="psw"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Enter Password again" name="pass" 
+                [(ngModel)]='user.confirmPassword' required >
+                
+                <label for="date"><b>Date of Birth</b></label> <br>
+                <input type="date" name="date" [(ngModel)]='user.dateOfBirth' required ><br><br>
+            
+                <label for="mobile"><b>Mobile No.</b></label>
+                <input type="tel" placeholder="Enter Mobile Number" pattern="[0-9]*" name="mobile" minlength="10" maxlength="10" 
+                title="Must contain exactly 10 digits" [(ngModel)]='user.mobileNumber'
+                required >
+                
+    
+                <button type="submit">Register</button>
+                <button type="button" class="cancelbtn">Cancel</button>
+              </div>
+            </table>
+            </form>
+            
+      </div>
+      </div>
+     </div>
+    
+     </body>
+</html>

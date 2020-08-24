@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    /* font-family: 'Muli', 'Baloo Da 2', 'Montserrat', sans-serif; */
+    font-family: 'Stoke' ;
+    color: #000;
+  }
+  
+  
+  body {
+    background-image: url("/assets/Vistara_Banner_Desktop.jpg");
+    background-repeat: no-repeat;
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+   }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .main {   
+    width: 80%;
+    margin: auto;
+  }
+  /* Add a card effect for articles */
+  .card {
+    /* background-color: white; */
+    padding: 15px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password], input[type=email], input[type=tel] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  /* Add padding to containers */
+  .container {
+    padding: 10px;
+    width: 350px;
+    margin: auto;
+  }
+  /* Set a style for all buttons */
+  button {
+    background-color: darkblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px ;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+  }
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: 40%;
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* table{
+    opacity: 10;
+    border: 2px solid red;
+  } */
+  
+  
+  input.ng-invalid.ng-touched{border-color: red;}
