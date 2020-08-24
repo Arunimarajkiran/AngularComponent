@@ -27,7 +27,7 @@
                 <input type="email" placeholder="Enter Email Address" name="email" pattern=".+@gmail.com" [(ngModel)]='user.email' required>
             
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" minlength="8"
+                <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
                 [(ngModel)]='user.password' required >
   
                 
