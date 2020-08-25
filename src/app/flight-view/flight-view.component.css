@@ -57,6 +57,7 @@ li input[type=text], input[type=date] {
 }
 .card div{
     display: inline-flex;
+    padding: 10px 10px;
 }
 .flight_details{
     float: right;
@@ -66,4 +67,16 @@ li input[type=text], input[type=date] {
     font-size: 12px;
     border: none;
     width: 100%;
+}
+.card card_content{
+    text-align: top;
+    padding: 10px;
+}
+.time {
+    color: #000;
+    font-family: Lato-Bold,Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 5px;
+    
 }
