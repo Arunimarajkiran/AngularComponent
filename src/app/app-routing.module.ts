@@ -9,6 +9,7 @@ import { DiscoverComponent } from "./discover/discover.component";
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 import { AdminDashboardComponent } from "./admin-dashboard/admin-dashboard.component";
+import { FlightViewComponent } from './flight-view/flight-view.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,9 @@ const routes: Routes = [
   },
   {
     path:'admindashboard',component:AdminDashboardComponent
+  },
+  {
+    path:'flightview',component:FlightViewComponent
   }
   
 ];
