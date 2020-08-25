@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ServiceService } from "../service.service";
 import { User } from "../User";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -16,7 +17,7 @@ export class RegisterComponent  {
   status;
 
     user=new User;
-    constructor(private service :ServiceService) { }
+    constructor(private service :ServiceService, private router: Router) { }
 
     sendEmail(){
       this.service.sendEmail(this.user).subscribe
@@ -32,5 +33,6 @@ export class RegisterComponent  {
       }
     )
     form.reset();
+    //this.router.navigate(['thankyoulink']);
     }
 }
