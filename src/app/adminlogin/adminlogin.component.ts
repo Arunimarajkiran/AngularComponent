@@ -20,10 +20,10 @@ export class AdminloginComponent implements OnInit {
   }
 
   loginCustomer() {
-    this.service.loginCustomer(this.login).subscribe(data=>{
+    this.service.loginAdmin(this.login).subscribe(data=>{
         alert(JSON.stringify(data));
         if(data.status=='SUCCESS') {
-            let userId=data.userId;/*th*/
+            let userId=data.id;/*th*/
             let userName=data.name;
 
             sessionStorage.setItem('userId',String(userId));
