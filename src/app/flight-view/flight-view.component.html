@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+  <header>
+      <nav>
+        <form action="/action_page.php" method="POST">
+          <ul class="nav_link">
+            <li style="margin-left: 0px;">
+              <label for="trip_type">Trip Type</label><br>
+                <select name="trip_type" id="type">
+                  <option value="one">One-Way</option>
+                  <option value="two">Two-Way</option> 
+                </select>
+            </li>
+            <li>
+              <label for="from">From</label><br>
+              <input type="text" id="from" name="from" required>
+            </li>
+            <li>
+              <label for="to">To</label><br>
+              <input type="text" id="from" name="from" required>
+            </li>
+            <li>
+              <label for="depart">Depart</label><br>
+              <input type="date" name="depart" id="depart" required>
+            </li>
+            <li>
+              <label for="return">Return</label><br>
+              <input type="date" name="return" id="return">
+            </li>
+            <li>
+              <label for="class">Class</label><br>
+              <select name="class" id="class">
+                <option value="Economy">Economy</option>
+                <option value="First Class">First Class</option> 
+                <option value="Business Class">Business Class</option> 
+              </select>
+            </li>
+            <li style="margin-right: 0px;">
+              Passenger No.<br>
+              <select name="no" id="no">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </li>
+          </ul>
+        </form>
+      </nav>
+  </header>
+  <section>
+    <div class="container">
+      <div class="card">
+        <img src="./assets/air2.jpg" style="width:10%">
+        <div class="card_content">
+          <div class="time">
+            <h1><b>16:40</b></h1><br>
+            <p style="color: darkgray;">New Delhi</p>
+          </div>
+          <div >
+            <h3><b>01</b> hr <b>30</b> mins</h3><br>
+            <hr>
+            <p style="text-align: center; color: blue;">Non Stop</p>
+          </div>
+          <div >
+            <h1><b>18:10</b></h1>
+            <p style="color: darkgray;">Ahemdabad</p>
+          </div>
+          <div >
+            <h1><b>₹ 3,418</b></h1>
+          </div>
+          <div >
+            <button class="button button2">Book</button>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="flight_details">
+        <select>
+          <option>Flight Details</option>
+          <option>1</option>
+          <option>1</option>
+      </select>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -21,7 +21,14 @@
       <li><a routerLink="/classeslink">Classes |</a></li>
       <li><a routerLink="/discoverlink">Discover |</a></li>
       <li><a routerLink="/registerlink">Sign Up |</a></li>
-      <li><a routerLink="/loginlink"><button class="button">Sign In</button></a></li>
+      <li class="dropdown"><a routerLink="/planlink" class="dropbtn">Sign-In |</a>
+        <div class="dropdown-content">
+          <a routerLink="/loginlink"><input type="radio">User Login</a><br/>
+          <a routerLink="/adminloginlink"><input type="radio">Admin Login</a>
+          <!--<a routerLink="#">Link 3</a>-->
+        </div>
+      </li>
+      
     </ul> 
     </div>
       

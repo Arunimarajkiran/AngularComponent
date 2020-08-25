@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Login } from "./Login";
 import { Router } from '@angular/router';
 import { ServiceService } from "../service.service";
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit{
   constructor(private service: ServiceService, private router: Router) {}
 
 
-  loginCustomer() {
+  loginCustomer(form :NgForm) {
       this.service.loginCustomer(this.login).subscribe(data=>{
           alert(JSON.stringify(data));
           if(data.status=='SUCCESS') {
@@ -29,7 +30,7 @@ export class LoginComponent implements OnInit{
 
               sessionStorage.setItem('userId',String(userId));
               sessionStorage.setItem('userName',userName);
-              this.router.navigate(['thankyoulink']);
+              this.router.navigate(['dashboardlink']);
           }
           else {
               this.message=data.message;

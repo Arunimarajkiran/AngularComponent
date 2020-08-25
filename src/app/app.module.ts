@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { FlightViewComponent } from './flight-view/flight-view.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     UserdashboardComponent,
     ThankYouComponent,
     AdminDashboardComponent,
-    AdminloginComponent
+    AdminloginComponent,
+    FlightViewComponent
   ],
   imports: [
     BrowserModule,

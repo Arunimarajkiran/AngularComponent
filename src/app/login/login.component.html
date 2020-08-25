@@ -13,16 +13,16 @@
                     </div>
                 </div>
                 <div class="form-bottom" style="color:white;">
-                    <form (ngSubmit)="loginCustomer()" method="POST">
+                    <form #loginForm ='ngForm' (ngSubmit)="loginCustomer(loginForm)" method="POST">
                         <div class="containerb">
                             <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" [(ngModel)] = login.email  />
+                            <input type="text" placeholder="Enter Username" name="uname" [(ngModel)] = login.email required  />
                             <span id="userSpan" style="color: red;"></span><br />
 
                             <label for="psw"><b>Password</b></label>
-                            <input type="text" placeholder="Enter Password" name="psw" [(ngModel)] = login.password />
+                            <input type="password" placeholder="Enter Password" name="psw" [(ngModel)] = login.password required/>
                             <span id="pswSpan" style="color: red;"></span><br />
-                            <button class="buttonb" type="submit">Login</button>
+                            <button class="buttonb" [disabled]='loginForm.invalid' type="submit">Login</button>
                             <label>
                                 <input type="checkbox" checked="checked" name="remember" /> Remember
                                 me
@@ -30,13 +30,13 @@
                         </div>
 
                         <div class="container1">
-                            <button type="button" class="cancelbtnb">Cancel</button>
+                            <button type="button"  class="cancelbtnb">Cancel</button>
                             <span class="psw"> <a href="#">Forgot password?</a></span>
                         </div>
                     </form>
                     <h2>{{ status?.message }}</h2>
                     <h2>{{ status?.userId }}</h2>
-                    <h2>{{ status?.userNname }}</h2>
+                    <h2>{{ status?.userName }}</h2>
                 </div>
             </div>
         </div>

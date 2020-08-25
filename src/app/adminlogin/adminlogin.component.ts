@@ -28,7 +28,7 @@ export class AdminloginComponent implements OnInit {
 
             sessionStorage.setItem('userId',String(userId));
             sessionStorage.setItem('userName',userName);
-            this.router.navigate(['thankyoulink']);
+            this.router.navigate(['admindashboard']);
         }
         else {
             this.message=data.message;
