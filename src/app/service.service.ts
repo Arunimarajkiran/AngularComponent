@@ -15,17 +15,17 @@ export class ServiceService {
   constructor(private http: HttpClient) { }
 
   registerAUser(user: User){
-    var url="http://localhost:8080/register";
+    var url="http://localhost:9090/register";
     return this.http.post(url,user);
   }
 
   loginCustomer(login: Login):Observable<LoginStatus>{
-    var url="http://localhost:8080/login";
+    var url="http://localhost:9090/login";
     return this.http.post<LoginStatus>(url,login);
   }
 
   loginAdmin(adminlogin: AdminLogin):Observable<AdminLoginStatus>{
-    var url="http://localhost:8080/adminlogin";
+    var url="http://localhost:9090/adminlogin";
     return this.http.post<AdminLoginStatus>(url,adminlogin);
   }
 
