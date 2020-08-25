@@ -10,6 +10,7 @@ import { UserdashboardComponent } from './userdashboard/userdashboard.component'
 import { ThankYouComponent } from './thank-you/thank-you.component';
 import { AdminDashboardComponent } from "./admin-dashboard/admin-dashboard.component";
 import { FlightViewComponent } from './flight-view/flight-view.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,9 @@ const routes: Routes = [
   },
   {
     path:'flightview',component:FlightViewComponent
+  },
+  {
+    path:'adminlogin',component:AdminloginComponent
   }
   
 ];
