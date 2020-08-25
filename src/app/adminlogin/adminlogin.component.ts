@@ -10,7 +10,7 @@ import { ServiceService } from "../service.service";
 })
 export class AdminloginComponent implements OnInit {
 
-  login : AdminLogin=new AdminLogin();
+  adminlogin : AdminLogin=new AdminLogin();
   message : String;
   status : any;
 
@@ -20,7 +20,7 @@ export class AdminloginComponent implements OnInit {
   }
 
   loginCustomer() {
-    this.service.loginAdmin(this.login).subscribe(data=>{
+    this.service.loginAdmin(this.adminlogin).subscribe(data=>{
         alert(JSON.stringify(data));
         if(data.status=='SUCCESS') {
             let userId=data.id;/*th*/
@@ -35,5 +35,4 @@ export class AdminloginComponent implements OnInit {
         }
     })
   }
-
 }
