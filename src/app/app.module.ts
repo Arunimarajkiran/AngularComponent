@@ -18,6 +18,10 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { FlightViewComponent } from './flight-view/flight-view.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AddFlightComponent } from './add-flight/add-flight.component';
+import { DeleteFlightComponent } from './delete-flight/delete-flight.component';
+import { UpdateFlightComponent } from './update-flight/update-flight.component';
+import { SearchFlightComponent } from './search-flight/search-flight.component';
 
 
 @NgModule({
@@ -34,7 +38,11 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     ThankYouComponent,
     AdminDashboardComponent,
     FlightViewComponent,
-    AdminloginComponent
+    AdminloginComponent,
+    AddFlightComponent,
+    DeleteFlightComponent,
+    UpdateFlightComponent,
+    SearchFlightComponent
   ],
   imports: [
     BrowserModule,

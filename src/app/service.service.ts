@@ -34,5 +34,25 @@ export class ServiceService {
     return this.http.post(url,user);
 
   }
+  addAFlight(user:User){
+    var url="http://localhost:8080/add";
+    return this.http.post(url,user);
+
+  }
+  deleteAFlight(user:User){
+    var url="http://localhost:8080/delete/{flightId}";
+    return this.http.post(url,user);
+
+  }
+  updateAFlight(user:User){
+    var url="http://localhost:8080/update";
+    return this.http.post(url,user);
+
+  }
+  searchAFlight(user:User){
+    var url="http://localhost:8080/search";
+    return this.http.post(url,user);
+
+  }
 
 }

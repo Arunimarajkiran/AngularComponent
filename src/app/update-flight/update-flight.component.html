@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  
+<div class="sidebar">
+  <a routerLink="/addflightlink"><i class="fa fa-fw fa-plus"></i> Add Flight</a><br>
+  <a routerLink="/deleteflightlink"><i class="fa fa-fw fa-trash"></i> Delete Flight</a><br>
+  <a routerLink="/updateflightlink"><i class="fa fa-fw fa-wrench"></i> Update Flight</a><br/>
+  <a routerLink="/searchflightlink"><i class="fa fa-fw fa-search"></i> Search Flight</a>
+</div>
+      <div class="card">
+        <div class="rcorners"> 
+        <h2 style="text-align: center;"> Update Flight</h2>
+        
+         <form #updateForm='ngForm' (ngSubmit)='updateAFlight(updateForm)' > 
+          <table align="center">
+          
+            <div class="container">
+              <label for="flightId"><b>Flight Number:</b></label>
+              <input type="number" placeholder="Enter Flight number" name="flightId" [(ngModel)]='user.flightId' required ><br/>
+
+              <button class="btn" [disabled]='updateForm.invalid' type="submit">Add</button>
+              <button type="button" class="cancelbtn" type="reset">Cancel</button>
+            </div>
+          </table>
+          </form>
+          
+    </div>
+    </div>
+  
+   </body>
+   </html>
+
+

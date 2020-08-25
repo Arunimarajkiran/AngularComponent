@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  
+<div class="sidebar">
+  <a routerLink="/addflightlink"><i class="fa fa-fw fa-plus"></i> Add Flight</a><br>
+  <a routerLink="/deleteflightlink"><i class="fa fa-fw fa-trash"></i> Delete Flight</a><br>
+  <a routerLink="/updateflightlink"><i class="fa fa-fw fa-wrench"></i> Update Flight</a><br/>
+  <a routerLink="/searchflightlink"><i class="fa fa-fw fa-search"></i> Search Flight</a>
+</div>
+      <div class="card">
+        <div class="rcorners"> 
+        <h2 style="text-align: center;"> Add New Flight</h2>
+        
+         <form #addForm='ngForm' (ngSubmit)='addAFlight(addForm)' > 
+          <table align="center">
+          
+            <div class="container">
+              <label for="dtime"><b>Departure Time:</b></label>
+              <input type="time" placeholder="Enter Departure Time" name="dtime" [(ngModel)]='user.departuretime' required ><br/>
+
+              <label for="atime"><b>Arrival Time:</b></label>
+              <input type="time" placeholder="Enter Arrival Time" name="atime" [(ngModel)]='user.arrivaltime' required ><br/>
+
+              <label for="source"><b>Source:</b></label>
+              <input type="text" placeholder="Enter Source" name="source"  [(ngModel)]='user.source' required><br/>
+          
+              <label for="destination"><b>Destination:</b></label>
+              <input type="text" placeholder="Enter Destination" name="destination" [(ngModel)]='user.destination' required ><br/>
+
+              
+              <label for="seatcapacity"><b>Seat Capacity:</b></label> <br>
+              <input type="number" placeholder="Enter Destination" name="seatcapacity" [(ngModel)]='user.seatcapacity' required ><br>
+            
+              <button class="btn" [disabled]='addForm.invalid' type="submit">Add</button>
+              <button type="button" class="cancelbtn" type="reset">Cancel</button>
+            </div>
+          </table>
+          </form>
+          
+    </div>
+    </div>
+  
+   </body>
+   </html>

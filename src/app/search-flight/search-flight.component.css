@@ -1,0 +1,84 @@
+body {font-family: "Lato", sans-serif;}
+
+.card{
+
+  background-image: url("/assets/admin-dashboard.jpg");
+    background-color: #cccccc;
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+ h2{
+   text-align: center;
+ } 
+.sidebar {
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 120px;
+  left: 0;
+  background-color: cornsilk;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #111;
+}
+/*.container{
+    
+}*/
+
+  input[type=text] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+.rcorners {
+    border-radius: 15px 50px 30px;
+    background: grey;
+    padding: 20px;
+    width: 500px;
+    height: 350px;
+    margin-left: 400px;
+    opacity: 0.8;
+    
+  }
+  .btn {
+    background-color: teal;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 35%;
+    opacity: 0.9;
+    margin: 25px;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+  .cancelbtn{
+    background-color: red;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 35%;
+    opacity: 0.9; 
+  }
+  
+  
