@@ -1,10 +1,24 @@
 body {font-family: "Lato", sans-serif;}
 
+.admin{
+
+  background-image: url("/assets/admin-dashboard.jpg");
+    background-color: #cccccc;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+ h2{
+   text-align: center;
+ } 
 .sidebar {
-  width: 160px;
+  width: 180px;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: 120px;
   left: 0;
   background-color: cornsilk;
   overflow-x: hidden;
@@ -26,6 +40,7 @@ body {font-family: "Lato", sans-serif;}
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */
   padding: 0px 10px;
+  
 }
 
 @media screen and (max-height: 450px) {
