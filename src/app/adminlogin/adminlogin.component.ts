@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AdminLogin } from "./AdminLogin";
 import { Router } from "@angular/router";
 import { ServiceService } from "../service.service";
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-adminlogin',
@@ -19,7 +20,7 @@ export class AdminloginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  loginCustomer() {
+  loginAdmin(form :NgForm) {
     this.service.loginAdmin(this.adminlogin).subscribe(data=>{
         alert(JSON.stringify(data));
         if(data.status=='SUCCESS') {
