@@ -14,8 +14,10 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { DeleteFlightComponent } from './delete-flight/delete-flight.component';
 import { UpdateFlightComponent } from './update-flight/update-flight.component';
-import { SearchFlightComponent } from './search-flight/search-flight.component';
-
+import { SearchFlight1Component } from './search-flight1/search-flight1.component';
+import { BookingComponent } from './booking/booking.component';
+import { SeatBookingComponent } from './seat-booking/seat-booking.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   {
@@ -65,7 +67,16 @@ const routes: Routes = [
     path:'updateflightlink',component:UpdateFlightComponent
   },
   {
-    path:'searchflightlink',component:SearchFlightComponent
+    path:'searchflightlink',component:SearchFlight1Component
+  },
+  {
+    path:'booking',component: BookingComponent
+  },
+  {
+    path: 'seat', component: SeatBookingComponent
+  },
+  {
+    path: 'payment',component:PaymentComponent
   }
   
   

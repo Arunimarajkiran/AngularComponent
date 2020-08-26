@@ -81,4 +81,34 @@ body {font-family: "Lato", sans-serif;}
     opacity: 0.9; 
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .search{
+    text-align:center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+}
+
+.button{
+    padding: 5px 10px;
+    text-align:center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color:whitesmoke;
+}
   

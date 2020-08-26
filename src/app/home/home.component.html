@@ -1,100 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <div class="bg-img">
-        <form class="container">
-          <h1>Find flights</h1>
-          <div>
-          <input type="radio" checked="checked" id="round" name="trip" value="round">
-          <label for="round">Round Trip</label>
-          <input type="radio" id="one-way" name="trip" value="one-way">
-          <label for="one-way">One Way</label><br/><br/>
-          </div>
-      
-          <div class="flight">
-          <label for="from"><b>FROM</b></label><br/>
-          <input type="text" placeholder="From" name="from" id="from" required>
-          </div>
-          <div class="flight">
-          <label for="to"><b>TO</b></label><br/>
-          <input type="text" placeholder="To" name="to" id="to" required>
-          </div><br/>
-          <div class="dates">
-          <label for="departure"><b>Departure</b></label>
-          <input type="Date" name="departure" id="departure" required>
-          </div>
-          <div class="dates">
+  <div class="bg-img">
+    <form class="container" (ngSubmit)="searchFlights()" method="POST">
+      <h1>Find flights</h1>
+      <div>
+        <input type="radio" id="round" name="trip" value="round">
+        <label for="round">Round Trip</label>
+        <input type="radio" checked="checked" id="one-way" name="trip" value="one-way">
+        <label for="one-way">One Way</label><br /><br />
+      </div>
+
+      <div class="flight">
+        <label for="from"><b>FROM</b></label><br />
+        <input list="source" placeholder="From" name="source" style="background-color:whitesmoke"
+          [(ngModel)]=sp.source><br><br>
+        <datalist id="source">
+          <option value="Delhi">
+          <option value="Mumbai">
+          <option value="Chennai">
+          <option value="Bangalore">
+          <option value="Dehradun">
+          <option value="Kolkata">
+          <option value="Hyderabad">
+          <option value="Chandigarh">
+          <option value="Goa">
+          <option value="Patna">
+        </datalist>
+        <br>
+        <label>{{sp.source}}</label>
+        <br>
+      </div>
+      <div class="flight">
+        <label for="to"><b>TO</b></label><br />
+        <input list="Destination" placeholder="To" name="destination" style="background-color:whitesmoke"
+          [(ngModel)]="sp.destination"><br><br>
+        <datalist id="Destination">
+          <option value="Delhi">
+          <option value="Mumbai">
+          <option value="Chennai">
+          <option value="Bangalore">
+          <option value="Dehradun">
+          <option value="Kolkata">
+          <option value="Hyderabad">
+          <option value="Chandigarh">
+          <option value="Goa">
+          <option value="Patna">
+        </datalist>
+
+        <br>
+        <label>{{sp.destination}}</label>
+        <br>
+      </div><br />
+      <div class="dates">
+        <label for="departure"><b>Departure</b></label>
+        <input type="date" placeholder="From" name="dateOfFlight" style="background-color:whitesmoke"
+          [(ngModel)]=sp.dateOfFlight><br><br>
+        <label>{{sp.dateOfFlight}}</label>
+      </div>
+      <!-- <div class="dates">
           <label for="return"><b>Return</b></label>
           <input type="Date" name="return" id="return" required>
-          </div><br/><br/>
-          <div class="ctz">
-          <label for="adults"><b>Adult</b></label>
-          <input type="number" class="adults" value="1">
-          </div>
-          <div class="ctz">
+          </div> -->
+      <div class="ctz">
+        <label for="adults"><b>Passenger</b></label>
+        <select name="numberOfPassengers" [(ngModel)]=sp.numberOfPassengers>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+
+        </select>
+
+        <br>
+        <label>{{sp.numberOfPassengers}}</label>
+        <br>
+        <br>
+
+      </div>
+      <!-- <div class="ctz">
           <label for="children"><b>Children(2-11)</b></label>
           <input type="number" class="adults" value="0">
-          </div>
-          <br/><br/>
-          <div class="ctz">
-          <label for="class"><b>Travel Class</b></label>
-          <select>
-            <option value="1">Economy Class</option>
-            <option value="2">Business Class</option>
-          </select>
-          </div>
-          <button type="submit" class="btn">Search</button>
-        </form>
+          </div>-->
+      <br /><br />
+      <div class="ctz">
+        <label for="class"><b>Travel Class</b></label>
+        <input list="cabin" placeholder="Cabin" name="cabinSelected" style="background-color:whitesmoke"
+        [(ngModel)]=sp.cabinSelected><br><br>
+        <datalist id="cabin">
+          <option value="economy">
+          <option value="business">
+        </datalist>
+        <br>
+        <br>
+        <label>{{sp.cabinSelected}}</label>
+        <br>
       </div>
-      
-      <section class="view intro rgba-gradient">
-      <div class="full-bg-img">
+      <button type="submit" class="btn">Search</button>
+    </form>
+    <table *ngIf="data" border="1" align="center">
+      <tr>
+        <th>Flight Number</th>
+        <th>Duration</th>
+        <th>Departure Schedule</th>
+        <th>Arival Schedule</th>
+        <th>Economy Fare</th>
+        <th>Business Fare</th>
+        <th>Select</th>
+      </tr>
+      <tr *ngFor="let d of data">
+        <td>{{ d.flightNumber }}</td>
+        <td>{{ d.duration }}</td>
+        <td>{{ d.departureSchedule }}</td>
+        <td>{{ d.arrivalSchedule }}</td>
+        <td>{{ d.initialEconomyfare }}</td>
+        <td>{{ d.initialBusinessfare }}</td>
+         <td><button (click)= "selectFlight(d)">Check this Flight</button></td>
+    </table>
+      <br><br>
+      <router-outlet></router-outlet>
+  </div>
+
+  <section class="view intro rgba-gradient">
+    <div class="full-bg-img">
       <div>
-      <h2 styles="text-align: center;"> 20 Years Strong!</h2>
+        <h2 styles="text-align: center;"> 20 Years Strong!</h2>
         <p>On April 15, 2000, R.K Sinha flew the first Indian Airlines flight – carrying<br>
-        Indian mail from Mumbai, Maharashtra, to Dehradun, Uttrakhand. <br>
-        After 8 years of mail routes, the airline began to form into what it is today.<br>
-        Indian founder R.K. Sinha worked with Donald Douglas to create the DC-3; <br>
-        a plane that changed the entire airline industry, switching revenue sources<br>
-        from mail to passengers.<br>
+          Indian mail from Mumbai, Maharashtra, to Dehradun, Uttrakhand. <br>
+          After 8 years of mail routes, the airline began to form into what it is today.<br>
+          Indian founder R.K. Sinha worked with Donald Douglas to create the DC-3; <br>
+          a plane that changed the entire airline industry, switching revenue sources<br>
+          from mail to passengers.<br>
         </p>
       </div>
-      </div>
-      </section>
-      <div class="rgba-gradient">
-      <section class="intro-1">
+    </div>
+  </section>
+  <div class="rgba-gradient">
+    <section class="intro-1">
       <div style="text-align: right;">
-      <h2>We are returning to the sky!</h2>
-      <p>
-      
-      We are returning to the sky. As of June, we are <br>
-      pleased to welcome you to safe travels on an <br>
-      expanded number of domestic flights. Our objective<br>
-      is to keep you safe throughout your trip with a <br>
-      socially distant, contactless and hygienic travel <br>
-      experience. We provide extra flexible rights for <br>
-      tickets, to accommodate changes in your travel <br>
-      schedule. You can begin planning new trips<br>
-      by reviewing our expanded flight plan.
-      </p>
+        <h2>We are returning to the sky!</h2>
+        <p>
+
+          We are returning to the sky. As of June, we are <br>
+          pleased to welcome you to safe travels on an <br>
+          expanded number of domestic flights. Our objective<br>
+          is to keep you safe throughout your trip with a <br>
+          socially distant, contactless and hygienic travel <br>
+          experience. We provide extra flexible rights for <br>
+          tickets, to accommodate changes in your travel <br>
+          schedule. You can begin planning new trips<br>
+          by reviewing our expanded flight plan.
+        </p>
       </div>
-      </section>
-      </div>
-      <div>
-      <section class="intro-2">
+    </section>
+  </div>
+  <div>
+    <section class="intro-2">
       <div style="text-align: left;">
-      <h2>Feel relaxed while traveling in India!</h2>
-      <p>
-      Secure yourself and your loved ones with Tourist Protection and Support<br>
-      Insurance, offering Covid-19 coverage, and enjoy your holiday in India.
-      </p>
+        <h2>Feel relaxed while traveling in India!</h2>
+        <p>
+          Secure yourself and your loved ones with Tourist Protection and Support<br>
+          Insurance, offering Covid-19 coverage, and enjoy your holiday in India.
+        </p>
       </div>
-      </section>
-      </div>
+    </section>
+  </div>
 </body>
+
 </html>

@@ -6,6 +6,8 @@ import { AdminLogin } from "./adminlogin/AdminLogin";
 import { LoginStatus } from "./login/LoginStatus";
 import { AdminLoginStatus } from "./adminlogin/AdminLoginStatus";
 import { Observable } from 'rxjs';
+import { SearchParameters } from "./search-flight1/SearchParameters";
+import { SeatDetails } from "./seat-booking/SeatsAvailable";
 
 @Injectable({
   providedIn: 'root'
@@ -53,6 +55,17 @@ export class ServiceService {
     var url="http://localhost:8080/search";
     return this.http.post(url,user);
 
+  }
+
+  fetchflights(sp: SearchParameters){
+    const url="http://localhost:8080/getFlights.api";
+    return this.http.post<SearchParameters>(url,sp);
+}
+
+fetchAvailableSeats(sa: SeatDetails):Observable<any>
+  {
+    const url="http://localhost:8080/availableseats.api";
+    return this.http.post(url,sa);
   }
 
 }
