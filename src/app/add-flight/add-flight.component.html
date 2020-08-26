@@ -16,6 +16,7 @@
       <div class="card">
         <div class="rcorners"> 
         <h2 style="text-align: center;"> Add New Flight</h2>
+        <h2 style="text-align: center; color: red;">{{status?.message}}</h2>
         
          <form #addForm='ngForm' (ngSubmit)='addAFlight(addForm)' > 
           <table align="center">
